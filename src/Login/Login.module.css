@@ -1,25 +1,25 @@
-import styled from 'styled-components';
-export const Container = styled.div`
+
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url('/images/bg.png') repeat;
-`;
+  background: url('/public/images/bg.png') repeat;
+}
 
-export const Header = styled.header`
+.header {
   position: absolute;
   top: 10px;
   left: 10px;
-`;
+}
 
-export const Logo = styled.img`
+.logo {
   width: 50px;
   height: 50px;
-`;
+}
 
-export const LoginForm = styled.form`
+.loginForm {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
@@ -27,52 +27,47 @@ export const LoginForm = styled.form`
   max-width: 400px;
   width: 100%;
   text-align: center;
-`;
+}
 
-export const LoginTitle = styled.h2`
+.loginTitle {
   margin-bottom: 20px;
-`;
+}
 
-export const InputLabel = styled.label`
+.inputLabel {
   display: block;
   margin-bottom: 8px;
-`;
+}
 
-export const Input = styled.input`
+.input {
   width: 100%;
   padding: 10px;
   margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-`;
+}
 
-export const LoginButton = styled.button`
-  background-color: #f69438;
+.loginButton {
+  background-color: #4caf50;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-`;
+}
 
-export const LinksContainer = styled.div`
+.linksContainer {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
-`;
+}
 
-export const ForgotPasswordLink = styled.a`
+.forgotPasswordLink,
+.signUpLink {
   color: #666;
   text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
+}
 
-export const SignUpLink = styled.a`
-  color: #666;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
+.forgotPasswordLink:hover,
+.signUpLink:hover {
+  text-decoration: underline;
+}
