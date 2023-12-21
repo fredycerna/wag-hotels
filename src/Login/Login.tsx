@@ -13,7 +13,7 @@ import {
   SignUpLink,
 } from './styles';
 
-const Login: React.FC = () => {
+const Login: () => React.JSX.Element = () => {
   return (
     <Container>
       <Header>
