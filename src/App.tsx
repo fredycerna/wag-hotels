@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import Login from './Login/Login';
+import Login from './components/Login/Login';
 function App(): ReactElement {
   return (
     <div>
