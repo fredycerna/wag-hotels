@@ -48,32 +48,28 @@ Wag Hotels Login is a React application designed to simulate the login functiona
 
 ## Available Scripts
 
-### `yarn start`
-
 Starts the application in development mode.
 
-### `yarn build`
+#### `yarn start`
 
 Builds the application for production.
 
-### `yarn test`
+#### `yarn build`
 
 Runs unit tests.
 
-### `yarn eject`
-
-Ejects the app from Create React App, allowing more configuration options.
-
-### `yarn lint`
+#### `yarn test`
 
 Lints the code using ESLint.
 
-### `yarn format`
+#### `yarn lint`
 
 Formats the code using Prettier.
 
-### `yarn test:watch`
+#### `yarn format`
 
 Runs tests in watch mode.
+
+#### `yarn test:watch`
 
 Note: Make sure to run these scripts in the project root directory using the `yarn` package manager.
