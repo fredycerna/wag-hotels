@@ -1,46 +1,79 @@
-# Getting Started with Create React App
+# Wag Hotels Login
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+
+Wag Hotels Login is a React application designed to simulate the login functionality for Wag Hotels. This project serves as a demonstration for a senior developer position and includes key features, technologies used, project structure, setup instructions, available scripts, code linting, testing, contributions, license, and contact information.
+
+## Key Features
+
+- **Simulated Login Process:** The application simulates the login process with email and password.
+- **Responsive Design:** The login component is designed to be responsive, ensuring a seamless user experience on mobile devices.
+- **TypeScript Integration:** Utilizes TypeScript for static typing, enhancing code robustness and maintainability.
+- **CSS Modules:** Implements CSS Modules for modular and maintainable styling, ensuring a consistent design.
+- **Accessibility:** Includes accessibility features to enhance usability for a diverse range of users.
+- **Unit Tests:** Incorporates unit tests using Jest to ensure code reliability and prevent regressions.
+- **Axios Integration:** Uses Axios for handling authentication API requests, maintaining a secure and efficient connection.
+- **Git Hooks with Husky:** Integrates with Git hooks through Husky to run tests automatically on pre-commit, enforcing code quality.
+
+## Technologies Used
+
+- React
+- TypeScript
+- Styled Components
+- Axios
+- Jest
+- ESLint
+- Prettier
+- Husky
+
+## Project Structure
+
+- **Components:** Contains all React components.
+- **Shared:** Includes shared utility functions, API requests, and constants.
+- **Types:** Holds types.
+
+## Project Setup
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone git@github.com:fredycerna/wag-hotels.git
+
+2. **Install Dependencies:**
+
+   ```bash
+   cd wag-hotels-login
+   yarn install
+
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Starts the application in development mode.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `yarn build`
+
+Builds the application for production.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs unit tests.
 
-### `npm run build`
+### `yarn eject`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ejects the app from Create React App, allowing more configuration options.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `yarn lint`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Lints the code using ESLint.
 
-### `npm run eject`
+### `yarn format`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Formats the code using Prettier.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `yarn test:watch`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Runs tests in watch mode.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Note: Make sure to run these scripts in the project root directory using the `yarn` package manager.
