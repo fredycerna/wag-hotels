@@ -1,10 +1,10 @@
-import { AuthResponse } from '../types/types';
+import { AuthResponse, CookieOptions } from '../types/types';
 
 const ACCESS_TOKEN_KEY = 'access_token';
 const REFRESH_TOKEN_KEY = 'refresh_token';
 
 export const saveTokensToCookies = (authResponse: AuthResponse): void => {
-  const cookieOptions: { [key: string]: string | boolean } = {
+  const cookieOptions: CookieOptions = {
     path: '/',
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'strict',
@@ -26,19 +26,16 @@ export const getRefreshTokenFromCookies = (): string | boolean | null => {
   return parseCookies()[REFRESH_TOKEN_KEY] || null;
 };
 
-const serialize = (options: { [key: string]: string | boolean }): string => {
+const serialize = (options: CookieOptions): string => {
   return Object.entries(options)
     .map(([key, value]) => `${key}=${value}`)
     .join('; ');
 };
 
-const parseCookies = () => {
-  return document.cookie.split(';').reduce(
-    (acc, cookie) => {
-      const [key, value] = cookie.trim().split('=');
-      acc[key] = value;
-      return acc;
-    },
-    {} as { [key: string]: string | boolean },
-  );
+const parseCookies = (): CookieOptions => {
+  return document.cookie.split(';').reduce((acc, cookie) => {
+    const [key, value] = cookie.trim().split('=');
+    acc[key] = value;
+    return acc;
+  }, {} as CookieOptions);
 };

@@ -1,6 +1,6 @@
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { API_BASE_URL, LOGIN_ENDPOINT } from './constants';
-import { AuthResponse, Credentials } from '../types/types';
+import { ApiError, AuthResponse, Credentials } from '../types/types';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -22,12 +22,14 @@ export const login = async (
       credentials,
       config,
     );
-
     return response.data;
   } catch (error: unknown) {
     if (axios.isAxiosError(error)) {
       const axiosError = error as AxiosError;
-      throw axiosError.response?.data || axiosError.message;
+      throw {
+        message: axiosError.message,
+        status: axiosError.status,
+      } as ApiError;
     } else {
       throw error;
     }

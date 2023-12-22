@@ -1,6 +1,3 @@
-// types.ts
-import { AxiosError } from 'axios';
-
 export interface Credentials {
   username: string;
   password: string;
@@ -11,8 +8,11 @@ export interface AuthResponse {
   access: string;
 }
 
-export type AxiosErrorWithData = AxiosError & {
-  response?: {
-    data?: unknown;
-  };
-};
+export interface ApiError {
+  status: number | undefined;
+  message: string;
+}
+
+export interface CookieOptions {
+  [key: string]: string | boolean;
+}
